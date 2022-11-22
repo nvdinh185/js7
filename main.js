@@ -1,6 +1,6 @@
-var a = prompt("Nhập hệ số a = ");
-var b = prompt("Nhập hệ số b = ");
-var c = prompt("Nhập hệ số c = ");
+var a = prompt("Nhập hệ số a: ");
+var b = prompt("Nhập hệ số b: ");
+var c = prompt("Nhập hệ số c: ");
 
 try {
     if (a == "" || b == "" || c == "") throw 'Không được bỏ trống';
@@ -20,11 +20,11 @@ function caculate(a, b, c) {
         return "Phương trình vô nghiệm";
     }
     else if (delta == 0) {
-        return "Phương trình có nghiệm kép x1=x2= " + (-b / (2 ^ a));
+        return "Phương trình có nghiệm kép x1 = x2 = " + (-b / (2 ^ a));
     }
     else {
         var x1 = (-b - Math.sqrt(delta)) / (2 * a);
         var x2 = (-b + Math.sqrt(delta)) / (2 * a);
-        return "Phương trình có 2 nghiệm phân biệt x1= " + x1 + ", x2= " + x2;
+        return "Phương trình có 2 nghiệm phân biệt x1 = " + x1 + ", x2 = " + x2;
     }
 }
