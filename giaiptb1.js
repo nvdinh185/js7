@@ -1,5 +1,7 @@
 function giaiPTB1(a, b) {
-    if (a == 0) {
+    if (isNaN(a) || isNaN(b)) {
+        throw new Error("Nhập hệ số không đúng định dạng số!");
+    } else if (a == 0) {
         throw new Error("Vui long nhap he so a khac 0!");
     } else {
         return "Phuong trinh co nghiem: " + (-b / a);
@@ -15,6 +17,6 @@ do {
         console.log(results);
         cont = false;
     } catch (e) {
-        console.log(e);
+        console.error(e);
     }
 } while (cont);
