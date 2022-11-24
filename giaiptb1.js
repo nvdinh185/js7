@@ -17,6 +17,6 @@ do {
         console.log(results);
         cont = false;
     } catch (e) {
-        console.error(e);
+        alert(e);
     }
 } while (cont);
