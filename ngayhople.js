@@ -38,14 +38,13 @@ do {
         nam = Number(nam);
         if (isNaN(ngay) || isNaN(thang) || isNaN(nam)) {
             throw new Error("Ngày tháng năm nhập vào không đúng định dạng!");
-        }
-        if (!ngayHopLe(ngay, thang, nam) || nam >= 2005) {
+        } else if (!ngayHopLe(ngay, thang, nam) || nam >= 2005) {
             throw new Error("Ngày tháng năm không hợp lệ!");
         } else {
             console.log("Ngày: " + ngay + "\nTháng: " + thang + "\nNăm: " + nam);
             check = false;
         }
     } catch (e) {
-        console.error(e);
+        alert(e);
     }
 } while (check);
